@@ -34,15 +34,14 @@ const doNext = () => {
         picElem.classList.remove('fade-out');
         imgElem.classList.remove('fade-out');
 
-        nameElem.classList.add('fade-in');
+        imgElem.src = obj.image;
         nameElem.innerHTML=obj.name+" <span>"+obj.prof+"</span>"
-    
-        textElem.classList.add('fade-in');
         textElem.innerHTML = obj.text;
         
+        nameElem.classList.add('fade-in');
+        textElem.classList.add('fade-in');
         picElem.classList.add('fade-in');
-        imgElem.src = obj.image;
-    
+        
         setTimeout(() => {
             nameElem.classList.remove('fade-in');
             textElem.classList.remove('fade-in');
